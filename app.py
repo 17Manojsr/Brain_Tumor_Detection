@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 model =load_model('BrainTumor10Epochs.h5')
-print('Model loaded. Check http://127.0.0.1:5000/')
+print('Model loaded. Check https://tumor-detection.onrender.com')
 
 
 def get_className(classNo):
