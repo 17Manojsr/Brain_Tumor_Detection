@@ -1,22 +1,43 @@
-# Brain Tumor Detection
+# Brain Tumor Detection Web Application
 
-Brain tumor is an abnormal growth of cells within the brain or surrounding tissues, categorized as either benign or malignant. They can originate in the brain or spread from elsewhere in the body. Symptoms vary but may include headaches, seizures, vision changes, and personality shifts. Diagnosis involves medical history assessment, physical exams, imaging, and sometimes biopsies. Treatment options depend on tumor type and may include surgery, radiation, chemotherapy, targeted therapy, or immunotherapy. Prognosis varies, with early diagnosis and tailored treatment improving outcomes. Follow-up care and monitoring are often necessary after treatment to manage potential recurrences or side effects.
+This is a web application built using Flask for detecting brain tumors from MRI images. The application allows users to upload MRI images and get predictions about whether a brain tumor is present in the image or not.
 
-## Requirements
+## Installation
 
-opencv
+1. Clone the repository:
 
-pillow
+   ```bash
+   git clone https://github.com/17Manojsr/Brain_Tumor_Detection.git
 
-tensorflow
+2. Install the required dependencies:
 
-## Tumor Detection
-The GUI can be used to detect and view the tumor region.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-The tensorflow model can be used to detect if the MRI image contains tumor or not.
+## Usage
 
-![alt text](tumordetection.jpg)
+1. Navigate to the root directory of the project.
 
-The tumor region can be viewed using Image processing methods applied through opencv. Image segmentation using marker-based watershed segmentation algorithm is used to view the tumor region. A watershed is a transformation defined on a grayscale image. We label the region which we are sure of being the foreground or object with one color(or intensity), and label the region which we are sure of being background or non-object with another color and finally the region which we are not sure of anything, we label it with 0. That is our marker. Then apply watershed algorithm. Then our marker will be updated with the labels we gave, and the boundaries of objects will have a value of -1.
+2. Start the Flask application by running the following command:
 
-![alt text](viewtumor.jpg)
+   ```bash
+   python app.py
+   ```
+3. Once the application is running, open your web browser and go to http://127.0.0.1:5000/.
+
+4. You will see the home page of the application where you can upload an MRI image.
+
+5. Select an MRI image file and click the "Upload" button.
+
+6. Wait for the prediction result to be displayed. The result will indicate whether a brain tumor is detected in the uploaded image or not.
+
+## Model
+
+The brain tumor detection model used in this application is stored in the file BrainTumor10Epochs.h5. It is a pre-trained model built using TensorFlow/Keras.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Checkout [Website Deployment Link](https://17manojsr.github.io/Brain_Tumor_Detection/)
